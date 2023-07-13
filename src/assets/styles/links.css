@@ -1,0 +1,211 @@
+:root{
+--active-svg:gray;
+--active-link-color: #F59E0B;
+--amber-200: rgb(253 230 138);
+--amber-300:rgb(252 211 77);
+--yellow-200:  rgb(254 240 138);
+}
+
+/* ::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, amber, darkorange);
+  width: 10px;
+  height: 50px;
+} */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(252 211 77);
+  }
+
+ body::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, rgb(252 211 77), rgb(94 234 212));
+    border-radius: 10px;
+  }
+
+/*Links */
+.links_mob,
+.links{
+display: flex;
+gap: var(--g,0.5rem);
+align-items: center;
+}
+
+.links_mob {
+--g:0.2rem;
+white-space: nowrap;
+}
+
+
+
+.links svg{
+width: 1.5rem;
+height: 1.5rem;
+}
+
+.links_mob svg{
+    --active-svg: #fff;
+    width: 1rem;
+    height: 1rem;
+}
+
+@media screen and (min-width:500px) {
+    .links_mob svg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+.links_mob.router-link-active svg{
+--active-svg: var(--yellow-200);
+}
+
+.links:hover {
+color: var(--active-link-color);
+}
+.links:hover svg {
+--active-svg: var(--active-link-color);
+}
+
+.links.router-link-active {
+color: var(--active-link-color);
+}
+
+.links_mob.router-link-active  {
+color: rgb(254 240 138);
+}
+
+.links.router-link-active svg{
+--active-svg: var(--active-link-color);
+/* animation: bounce 1s 3 alternate-reverse;  */
+}
+
+
+@keyframes bounce 
+{0%, 100% { transform: translateY(-25%) rotate(0deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); } 
+50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1);} 
+75%, 100% { transform: scale(2)  rotate(360deg);}}
+/*End Links */
+
+
+/* Mobile Sidebar */
+#mobile-sidebar {
+/* display: var(--mob-dis,none); */
+ --mob-dis:flex;
+ display: var(--mob-dis);
+ position: absolute;
+ z-index:100;
+background-image: linear-gradient(to right, var(--active-link-color), rgb(45 212 191));
+/* background-color: var(--active-link-color); */
+left: 0;
+top:0;
+align-items: center;
+height: 45px;
+width: 100%;
+transform: translateX(-100%);
+transition: transform 0.8s ease-in-out;
+justify-content: space-between;
+padding-left:  0.5rem;
+padding-right: 1rem;
+color: #fff;
+--tw-shadow-color: #f59e0b;
+--tw-shadow: var(--tw-shadow-colored);
+--tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+
+#mobile-sidebar-content-inner {
+width: 100%;
+background-color: red;
+}
+
+
+#mobile-sidebar.show {
+    /* --mob-dis: flex; */
+    transform: translateX(0);
+}
+
+
+#mobile-sidebar > button {
+background-color: var(--amber-200);
+align-items: center;
+border-radius: 999px;
+display: flex;
+gap: 0 2px;
+width: 4.5rem;
+justify-content: center;
+color: var(--active-link-color);
+}
+
+
+#mobile-sidebar > button svg{
+width: 20px;
+height: 20px;
+}
+
+@media screen and (min-width:900px) {
+#mobile-sidebar {
+    display: none;
+}
+}
+
+.about-h1 {
+position: relative;
+will-change: width;
+transition: all 500ms;
+}
+
+
+.about-h1::after{
+content: "";
+position: absolute;
+height: 3px;
+width: 20px;
+bottom: 0;
+background-color: #F59E0B;
+left: 0;
+transition: all 0.5s;
+}
+
+.about-h1:hover{
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(245 158 11), #ec4899, #2dd4bf);
+
+}
+
+.about-h1:hover::after {
+cursor: pointer;
+width: 50px;
+}
+
+
+
+
+  .me-circle-container {
+    animation: colorChange 6s infinite;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+  }
+
+  @keyframes colorChange {
+    0% { background-color: rgb(253 230 138); }
+    20% { background-color: rgb(252 211 77); }
+    40% { background-color: rgb(94 234 212); }
+    80% { background-color: rgb(251 191 36);}
+    100% { background-color:  rgb(20 184 166); }
+  }
+
+
+/*End Mobile Sidebar */
+
+
