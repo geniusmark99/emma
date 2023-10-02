@@ -42,7 +42,7 @@ import Linkedin from './icons/Linkedin.vue';
                 <ul class="flex flex-col gap-y-4 items-center md:items-start md:text-left">
 
                     <li class="text-justify">
-                        <a href="mailto:emmanuelfacados@gmail.com" class="underline flex gap-x-4 items-center">
+                        <a href="mailto:markthavalor@gmail.com" class="underline flex gap-x-4 items-center">
                             <div class="contact_icon">
                                 <EmailIcon />
                             </div>
@@ -54,7 +54,7 @@ import Linkedin from './icons/Linkedin.vue';
                     </li>
 
                     <li class="text-justify">
-                        <a href="https://wa.me/2347056951660" class="underline flex gap-x-4" target="_blank">
+                        <a href="https://wa.me/2348141625004" class="underline flex gap-x-4" target="_blank">
                             <div class="contact_icon">
                                 <WhatsappIcon />
                             </div>
