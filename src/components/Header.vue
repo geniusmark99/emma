@@ -124,7 +124,7 @@ onMounted(() => {
                     </li>
                 </ul>
 
-                <a href="https://wa.me/2347056951660" target="_blank" class="btn-default"> Contact me </a>
+                <a href="https://wa.me/2348141625004" target="_blank" class="btn-default"> Contact me </a>
             </div>
         </nav>
     </header>
